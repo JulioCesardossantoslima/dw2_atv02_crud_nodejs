@@ -1,0 +1,48 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<div class="cardapio">
+    <h3>Cardápio</h3>
+    <p>Escolha seu sabor favorito, combine com sua bebida preferida e aproveite uma experiência cheia de sabor! ❤️</p>
+    <p><strong>Bom apetite!</strong></p>
+    <div class="tabelas-container">
+  <table class="tabela-cardapio">
+    <thead>
+      <tr>
+        <th>Pizza</th>
+        <th>Nome</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cardapio.forEach(function(item) { %>
+        <tr>
+            <td><img src="/images/<%= item.image %>" alt="<%= item.nomes %>"></td>
+          <td><%= item.nomes %></td>
+          <td><%= item.preco %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+    <!-- Tabela de bebidas -->
+  </table>
+    <table class="tabela-cardapio">
+    <thead>
+      <tr>
+        <th>Bebida</th>
+        <th>Nome</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% bebidas.forEach(function(item) { %>
+        <tr>
+            <td><img src="/images/<%= item.image %>" alt="<%= item.nomes %>"></td>
+          <td><%= item.nomes %></td>
+          <td><%= item.preco %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+  <a href="/contato" class="botao-pedir">Peça ja!</a>
+</div>
+<%- include ('partials/footer.ejs') %>

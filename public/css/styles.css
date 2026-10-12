@@ -1,0 +1,673 @@
+/* Styles for the entire page */
+/* ================================================ BODY ========================================================================= */
+html {
+  scroll-behavior: smooth;
+  background-color: #191919;
+}
+body {
+  background-color: #493545;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #47607f;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* ======================================== Separar Hero page de navbar =========================================================== */
+
+.topo {
+  width: 100%;
+  height: 5rem;
+  background-color: #191919;
+}
+
+/* ================================================= NAVBAR ====================================================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 140px;
+  background-color: #493545;
+  border-top: 4px solid #ed0e05;
+  border-bottom: 4px solid #ed0e05;
+  position: sticky;
+  z-index: 1000;
+}
+.nav-itens {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-itens li {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-itens a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  border-left: 2px solid #ed0e05;
+  padding: 12px 40px;
+  display: inline-block;
+}
+
+.nav-logo {
+  height: 100px;
+  width: auto;
+  padding-left: 20px;
+}
+
+.nav-itens a:hover {
+  color: #c1c4c1;
+  transition: background-color 0.2s;
+}
+
+/* ================== Index ==================================== */
+
+/* ================================================= HERO PAGE =================================================================== */
+
+.hero {
+  width: 100%;
+  height: 40rem;
+  background-image: url("../images/pizzabackground.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.hero p {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  background-color: rgba(25, 25, 25, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  position: relative;
+  left: 5px;
+}
+
+.hero h3 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  background-color: rgba(25, 25, 25, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  position: relative;
+  left: 5px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #ed0e05;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 12px 32px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.hero-btn:hover {
+  background-color: #b30b04;
+}
+
+.promocao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================== Promo index ==================================== */
+
+.promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 40px;
+}
+
+.promo h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.promo h4 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.indexdesconto {
+  max-width: 600px;
+  max-height: 500px;
+  border: #ed0e05 2px solid;
+  border-radius: 40px;
+}
+
+.descontotxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+/* ============================ Contato Index ========================== */
+
+.empregos {
+  background-color: #191919;
+}
+
+.emprego h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.emprego-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.emprego-text p {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: none;
+  max-width: 400px;
+}
+
+.emprego {
+  background-color: #191919;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.empregos h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.help-wanted {
+  border-radius: 50px;
+  border: #ed0e05 2px solid;
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+/* ================================================= Promoções ============================================================== */
+.promocoes {
+  background-color: #191919;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.eco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.eco-entrega {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  flex-wrap: wrap;
+}
+
+.eco-entrega h2 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+/* ======================= Hero Promo ====================== */
+
+.heroPromo {
+  background-image: url(../images/dinheiro.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 60px;
+}
+
+.heroPromo h4 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.heroPromo h3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.h4promo {
+  text-align: center;
+}
+
+#botaopromo {
+  margin-bottom: 40px;
+}
+
+.promo {
+  background-color: #191919;
+}
+
+/* ===================== Tabela Promo Entrega ======================== */
+.eco-entrega {
+  max-width: 800px;
+  text-align: center;
+}
+
+.tabela-promo {
+  width: 600px;
+  max-width: 90%;
+  margin: 20px auto 0;
+  border: 2px solid #ed0e05;
+  background-color: #191919;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.tabela-promo p {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: none;
+}
+
+.tabela-promo th {
+  border: #ed0e05 2px solid;
+}
+
+.tabela-promo td {
+  border: #ed0e05 2px solid;
+  padding: 10px;
+  text-align: center;
+}
+
+.economia {
+  max-width: 500px;
+  max-height: 240px;
+  border: #191919 1px solid;
+  border-radius: 30px;
+  display: block;
+}
+
+.promotext {
+  margin-top: 40px;
+}
+
+/* ========================================== Tabela Promo Local ========================== */
+.eco-local {
+  background-color: #191919;
+  padding: 40px;
+  text-align: center;
+}
+
+.eco-local {
+  color: white;
+  padding-top: 45px;
+}
+
+.eco-local p {
+  max-width: 800px;
+}
+
+.tabela-promolocal {
+  width: 600px;
+  max-width: 90%;
+  margin: 20px auto 0;
+  border: 2px solid #ed0e05;
+  background-color: #191919;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.tabela-promolocal p {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: none;
+}
+
+.tabela-promolocal th {
+  border: #ed0e05 2px solid;
+  white-space: nowrap;
+}
+
+.tabela-promolocal td {
+  border: #ed0e05 2px solid;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ============================================= Contato ============================================================== */
+.contato {
+  background-color: #191919;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.textcontato {
+  padding-top: 50px;
+  white-space: nowrap;
+}
+
+.contatos h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.enderecos {
+  width: 600px;
+  max-width: 90%;
+  margin: 20px auto 0;
+  border: 2px solid #ed0e05;
+  background-color: #191919;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.enderecos th {
+  border: #ed0e05 2px solid;
+}
+
+.enderecos td {
+  border: #ed0e05 2px solid;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.freddyCarro {
+  max-width: 400px;
+  max-height: 300px;
+  border: #191919 1px solid;
+  border-radius: 30px;
+}
+
+.textcontato {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: none;
+  max-width: 300px;
+}
+/* ================================================= Vagas =================================================================== */
+
+.contatos {
+  background-color: #191919;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vagas {
+  width: 600px;
+  max-width: 90%;
+  margin: 20px auto 0;
+  border: 2px solid #ed0e05;
+  background-color: #191919;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.vagas th {
+  border: #ed0e05 2px solid;
+}
+
+.vagas td {
+  border: #ed0e05 2px solid;
+  padding: 10px;
+  text-align: center;
+}
+
+.status.status.indisponivel {
+  color: red;
+  font-weight: bold;
+}
+
+.status.disponivel {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.status.indisponivel {
+  color: #999;
+}
+
+.adfred {
+  display: flex;
+  justify-content: center;
+}
+
+.adfred img {
+  width: 200px;
+  height: 300px;
+  border: #191919 1px solid;
+  border-radius: 20px;
+}
+
+.adfred h5 {
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.textoemprego {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: none;
+  max-width: 400px;
+}
+
+/* ================================================= FOOTER ====================================================================== */
+
+footer {
+  height: 10rem;
+  background-color: #493545;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  border-bottom: #ed0e05 4px solid;
+  border-top: #ed0e05 4px solid;
+}
+footer p {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+p {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===============================================TABELA CARDÁPIO =============================================== */
+
+.cardapio {
+  background-image: url("../images/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  flex-direction: column;
+}
+
+.cardapio h3 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cardapio p {
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  background-color: none;
+}
+
+.tabela-cardapio {
+  width: 600px;
+  max-width: 90%;
+  margin: 20px auto 0;
+  border: 2px solid #ed0e05;
+  background-color: #191919;
+  color: white;
+}
+
+.tabela-cardapio th {
+  border: #ed0e05 2px solid;
+}
+
+.tabela-cardapio td {
+  border: #ed0e05 2px solid;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabela-cardapio img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.botao-pedir {
+  display: inline-block;
+  background-color: #ed0e05;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 12px 32px;
+  margin: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.botao-pedir:hover {
+  background-color: #b30b04;
+}
+
+.tabelas-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}

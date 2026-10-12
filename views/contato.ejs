@@ -1,0 +1,68 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<div class="contatos">
+    <h1 class="textcontato">Contato e Localização:</h1>
+    <div class="contato">
+        <img src="/images/freddytour_1.png" alt="freddyCarro" srcset="" class="freddyCarro">
+        <div class="textcontato">
+            <h4>Entre em contato conosco:</h4>
+            <p>Estamos aqui para ajudar!<br> Se você tivcisar de mais informações,<br> não hesite em nos contatar<br> em alguma duvida</p>
+        </div>
+        <table class="enderecos">
+            <thead>
+                <tr>
+                    <th>Unidade</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% contatos.forEach(function(contato) { %>
+                <tr>
+                    <td><%= contato.local %></td>
+                    <td><%= contato.endereco %></td>
+                    <td><%= contato.telefone %></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+<div class="empregos">
+    <h3 class="textcontato">Vagas de emprego:</h3>
+    <div class="emprego">
+        <div class="adfred">
+        <img src="/images/fnafhelp.png" alt="Freddy Fazbear" class="adfred-img">
+        <div class="textoemprego">
+        <h5>Junte-se à nós e faça parte da família Fazbear!</h5>
+        <p>Aqui você não é apenas mais um funcionário é parte da nossa família. Trabalhamos com paixão pela pizza, respeito mútuo e a certeza de que cada dia é uma oportunidade de proporcionar uma boa experiência aos nossos clientes. Se você busca um ambiente para crescer, aprender e se sentir valorizado, nossa equipe tem espaço para você.</p>
+        </div>
+    </div>
+    <div class="tablevagas">
+    <table class="vagas">
+        <th>Vaga</th>
+        <th>Descrição</th>
+        <th>Status</th>
+        <tbody>
+  <% vagas.forEach(function(vaga) { %>
+    <tr>
+      <td><%= vaga.nome %></td>
+      <td><%= vaga.descricao %></td>
+      <td class="status <%= vaga.status === 'Disponível' ? 'disponivel' : 'indisponivel' %>">
+        <%= vaga.status %>
+      </td>
+    </tr>
+  <% }); %>
+        </tbody>
+    </table>
+        <div class="text-center mt-3">
+        <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#formAplicar">
+    Aplique ja!
+    </button>
+        </div>
+    </div>
+
+    </div>
+</div>
+<%- include ('partials/footer.ejs') %>
