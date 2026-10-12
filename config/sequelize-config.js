@@ -1,8 +1,13 @@
-import Sequelize  from "sequelize";
+import Sequelize from "sequelize";
 
-const connection = new Sequelize("mysql", "root", "", {
-  host: "localhost",
-  dialect: "mysql"
-});
+const connection = new Sequelize({
+    dialect: 'mysql',
+    host: 'localhost',
+    username: 'root',
+    password: '', 
+    database: 'pizzaria',
+    timezone: "-03:00",
 
-export default connection;
+})
+
+export default connection

@@ -8,10 +8,9 @@
             <h4>Entre em contato conosco:</h4>
             <p>Estamos aqui para ajudar!<br> Se você tivcisar de mais informações,<br> não hesite em nos contatar<br> em alguma duvida</p>
         </div>
-        <table class="enderecos">
+         <table class="enderecos">
             <thead>
                 <tr>
-                    <th>Unidade</th>
                     <th>Endereço</th>
                     <th>Telefone</th>
                 </tr>
@@ -19,13 +18,12 @@
             <tbody>
                 <% contatos.forEach(function(contato) { %>
                 <tr>
-                    <td><%= contato.local %></td>
                     <td><%= contato.endereco %></td>
                     <td><%= contato.telefone %></td>
                 </tr>
                 <% }); %>
             </tbody>
-        </table>
+        </table> 
     </div>
 
 </div>

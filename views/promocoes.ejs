@@ -9,31 +9,9 @@
     <a href="#promos"  class="btn btn-danger btn-lg" id="botaopromo">Ver Promoções!</a>
 </div>
 <div class="promocao" id="promos">
-  <div class="eco-entrega">
-          <h2>Promoções de Entrega</h2>
-          <p>Não importa onde você esteja, a promoção chega até você. Combos exclusivos para pedidos via delivery, pensados para transformar seu momento em casa em uma verdadeira experiência de pizzaria, sem sair do conforto do seu lar.</p>
-    <table class="tabela-promo">
-    <thead>
-      <tr>
-        <th>Tipo</th>
-        <th>Descrição</th>
-        <th>Preço</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% combos.forEach(function(item) { %>
-        <tr>
-          <td><%= item.nome %></td>
-          <td><%= item.descricao %></td>
-          <td><%= item.preco %></td>
-        </tr>
-      <% }); %>
-    </tbody>
-    </table>
-    </div>
     <div class="eco-local">
-      <h3>Promoções Especiais (Local) </h3>
-      <p>Aproveite condições especiais para curtir sua pizza direto na nossa casa. Essas promoções são pensadas para quem quer viver a experiência completa, saborear cada fatia fresquinha e aproveitar o clima da pizzaria.</p>
+      <h3>Promoções Especiais </h3>
+      <p>Aproveite condições especiais para curtir sua pizza quentinha! Essas promoções são pensadas para quem quer viver a experiência completa, saborear cada fatia fresquinha e aproveitar o clima da pizzaria.</p>
 <table class="tabela-promolocal">
   <thead>
     <tr>
@@ -43,7 +21,7 @@
     </tr>
   </thead>
   <tbody>
-    <% promocoesLocal.forEach(function(item) { %>
+    <% promocoes.forEach(function(item) { %>
       <tr>
         <td><%= item.nome %></td>
         <td><%= item.descricao %></td>

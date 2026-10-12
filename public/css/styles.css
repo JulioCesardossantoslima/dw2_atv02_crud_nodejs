@@ -452,7 +452,7 @@ h3 {
 
 .enderecos {
   width: 600px;
-  max-width: 90%;
+  max-width: 30%;
   margin: 20px auto 0;
   border: 2px solid #ed0e05;
   background-color: #191919;
@@ -475,7 +475,7 @@ h3 {
 }
 
 .freddyCarro {
-  max-width: 400px;
+  max-width: 350px;
   max-height: 300px;
   border: #191919 1px solid;
   border-radius: 30px;

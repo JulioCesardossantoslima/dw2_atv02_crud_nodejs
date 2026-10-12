@@ -1,19 +1,16 @@
 import express from "express";
-const rota = express.Router();
 import Promocao from "../models/promocoes.js";
+const rota = express.Router();
 
-// Página promocoes
-rota.get("/promocoes", (req, res) => {
-  // Selecionando todas as promocoes do banco de dados
+rota.get("/", (req, res) => {
   Promocao.findAll()
-    .then((promocao) => {
-      // Enviando a lista de promocoes para a página HTML
+    .then((promocoes) => {
       res.render("promocoes", {
-        promocoes: promocao,
+        promocoes: promocoes,
       });
     })
-    .catch(error =>
-      console.log(`Ocorrou um erro ao listar as promocoes. Erro ${error}`)
+    .catch((error) =>
+      console.log(`Ocorreu um erro ao listar as promoções. Erro ${error}`),
     );
 });
 

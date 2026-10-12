@@ -5,7 +5,7 @@
     <p>Escolha seu sabor favorito, combine com sua bebida preferida e aproveite uma experiência cheia de sabor! ❤️</p>
     <p><strong>Bom apetite!</strong></p>
     <div class="tabelas-container">
-  <table class="tabela-cardapio">
+ <table class="tabela-cardapio">
     <thead>
       <tr>
         <th>Pizza</th>
@@ -14,10 +14,10 @@
       </tr>
     </thead>
       <tbody>
-        <% cardapio.forEach((pizza) => { %>
+        <% cardapios.forEach((pizza) => { %>
             <tr>
                 <td>
-                    <img src="/images/<%= pizza.imagem %>"
+                    <img src="/images/<%= pizza.image %>"
                          alt="<%= pizza.nome %>">
                 </td>
                 <td><%= pizza.nome %></td>
@@ -25,9 +25,8 @@
             </tr>
         <% }) %>
     </tbody>
-    <!-- Tabela de bebidas -->
   </table>
-    <table class="tabela-cardapio">
+     <table class="tabela-cardapio">
     <thead>
       <tr>
         <th>Bebida</th>
@@ -39,8 +38,7 @@
         <% bebidas.forEach((bebida) => { %>
             <tr>
                 <td>
-                    <img src="/images/<%= bebida.imagem %>"
-                         alt="<%= bebida.nome %>">
+                    <img src="/images/<%= bebida.image %>" alt="<%= bebida.nome %>">
                 </td>
                 <td><%= bebida.nome %></td>
                 <td>R$ <%= Number(bebida.preco).toFixed(2).replace(".", ",") %></td>
