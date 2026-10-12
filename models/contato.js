@@ -20,7 +20,7 @@ const Contato = connection.define('contatos', {
     telefone:{
         type: Sequelize.STRING,
         allowNull: false
-    }
+    },
 })
 
 Contato.sync({force: false})

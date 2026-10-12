@@ -13,14 +13,17 @@
         <th>Preço</th>
       </tr>
     </thead>
-    <tbody>
-      <% cardapio.forEach(function(item) { %>
-        <tr>
-            <td><img src="/images/<%= item.image %>" alt="<%= item.nomes %>"></td>
-          <td><%= item.nomes %></td>
-          <td><%= item.preco %></td>
-        </tr>
-      <% }); %>
+      <tbody>
+        <% cardapio.forEach((pizza) => { %>
+            <tr>
+                <td>
+                    <img src="/images/<%= pizza.imagem %>"
+                         alt="<%= pizza.nome %>">
+                </td>
+                <td><%= pizza.nome %></td>
+                <td>R$ <%= Number(pizza.preco).toFixed(2).replace(".", ",") %></td>
+            </tr>
+        <% }) %>
     </tbody>
     <!-- Tabela de bebidas -->
   </table>
@@ -33,13 +36,16 @@
       </tr>
     </thead>
     <tbody>
-      <% bebidas.forEach(function(item) { %>
-        <tr>
-            <td><img src="/images/<%= item.image %>" alt="<%= item.nomes %>"></td>
-          <td><%= item.nomes %></td>
-          <td><%= item.preco %></td>
-        </tr>
-      <% }); %>
+        <% bebidas.forEach((bebida) => { %>
+            <tr>
+                <td>
+                    <img src="/images/<%= bebida.imagem %>"
+                         alt="<%= bebida.nome %>">
+                </td>
+                <td><%= bebida.nome %></td>
+                <td>R$ <%= Number(bebida.preco).toFixed(2).replace(".", ",") %></td>
+            </tr>
+        <% }) %>
     </tbody>
   </table>
 </div>

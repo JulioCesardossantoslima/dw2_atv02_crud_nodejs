@@ -44,13 +44,13 @@ import promocoesController from "./controllers/promocoesController.js";
 import Cardapio from "./models/cardapio.js";
 import Contato from "./models/contato.js";
 import Promocao from "./models/promocoes.js";
+import Bebida from "./models/bebidas.js";
 
 
 // Configurando as rotas
 app.use(cardapioController); // Configurando o controlador de cardápio
 app.use(contatoController); // Configurando o controlador de contato
 app.use(promocoesController); // Configurando o controlador de promoções
-
 // Configurações do Express
 app.set("view engine", "ejs");
 //Configurar a pasta 'PUBLIC' para arquivos estáticos como CSS e JavaScripts
@@ -69,3 +69,26 @@ app.listen(port, (error) => {
     console.log(`Servidor iniciado com sucesso em: http://localhost:${port}`);
   }
 });
+async function iniciarServidor() {
+    try {
+        // Testa a conexão com o banco
+        await connection.authenticate();
+        console.log("Conectado ao banco pizzaria!");
+
+        // Cria as tabelas caso ainda não existam
+        await Cardapio.sync();
+        await Bebida.sync();
+
+        console.log("Tabelas criadas ou já existentes!");
+
+        // Inicia o servidor depois da sincronização
+        app.listen(3000, () => {
+            console.log("Servidor rodando na porta 3000!");
+        });
+
+    } catch (error) {
+        console.error("Erro ao conectar ou criar tabelas:", error);
+    }
+}
+
+iniciarServidor();

@@ -1,18 +1,27 @@
 import express from "express";
-import Cardapio from "../models/contato.js";
+import Cardapio from "../models/cardapio.js";
+import Bebida from "../models/bebidas.js";
+
 const rota = express.Router();
 
-rota.get("/cardapio", (req, res) => {
-  // Selecionando todos os contatos do banco de dados
-  Cardapio.findAll()
-    .then((cardapio) => {
-      // Enviando a lista de contatos para a página HTML
-      res.render("cardapio", {
-        cardapio: cardapio,
-      });
-    })
-    .catch(error =>
-      console.log(`Ocorrou um erro ao listar o cardápio. Erro ${error}`)
-    );
+rota.get("/cardapio", async (req, res) => {
+  try {
+    // Buscando as pizzas do cardápio
+    const cardapio = await Cardapio.findAll();
+
+    // Buscando as bebidas
+    const bebidas = await Bebida.findAll();
+
+    // Enviando as duas listas para o mesmo EJS
+    res.render("cardapio", {
+      cardapio,
+      bebidas
+    });
+
+  } catch (error) {
+    console.log(`Ocorreu um erro ao listar o cardápio. Erro: ${error}`);
+    res.status(500).send("Erro ao carregar o cardápio.");
+  }
 });
+
 export default rota;

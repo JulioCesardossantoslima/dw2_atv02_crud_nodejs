@@ -21,6 +21,7 @@ const Cardapio = connection.define('cardapio', {
         type: Sequelize.STRING,
         allowNull: false
     }
+    
 })
 
 Cardapio.sync({force: false})
